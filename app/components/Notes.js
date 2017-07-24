@@ -16,7 +16,7 @@ export default class MyComponent extends Component {
         <Text style={styles.noteText}>{this.props.val.date}</Text>
         <Text style={styles.noteText}>{this.props.val.note}</Text>
 
-        <TouchableOpacity onpress={this.deleteNote} style={styles.deleteNote}>
+        <TouchableOpacity onPress={this.props.deleteNote} style={styles.deleteNote}>
           <Text style={styles.deleteNoteText}>x</Text>
         </TouchableOpacity>
 

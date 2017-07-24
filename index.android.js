@@ -42,6 +42,13 @@ export default class todo extends Component {
     });
   }
 
+  deleteNote(key) {
+    this.state.notesArray.splice(key, 1);
+    this.setState({
+      notesArray: this.state.notesArray,
+    })
+  }
+
   render() {
     let notes = this.state.notesArray.map((val, key) => {
       return <Notes key={key} keyval={key} val={val} deleteNote={ () => this.deleteNote(key) } />
